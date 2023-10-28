@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up Page</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="signup.css">
+
+</head>
+<body>
+   
+    <header>
+        <strong><h3>E-Shope</h3></strong>
+        
+        <form>
+          <div class="search-bar">
+              <label for="searchInput"></label>
+              <input type="text" list="input" id="searchInput" name="searchInput" placeholder="Search products..." style="width: 400px;">
+              <button type="button" onclick="searchProducts()" style="width: 70px;">Search</button>
+              <div id="searchResults"></div>
+              <datalist id="input">
+                  <option value="Cloth" data-location="showclo.html"></option>
+                  <option value="Footwear" data-location="footware.html"></option>
+              </datalist>
+          </div>
+      </form>
+  
+          </div>
+          <div class="nav">
+              <a href="index.html" onclick="showPage('home')" style="color: rgb(252, 254, 254);">Home</a>
+            
+              <a href="about.html" onclick="showPage('about')" style="color:rgb(252, 254, 254) ;">About</a>
+              <a href="help.html" onclick="showPage('contact')" style="color:rgb(252, 254, 254) ;">Help Desk</a>
+              <a href="Review.html" onclick="showPage('Feedback')" style="color:rgb(252, 254, 254) ;">Reviews</a>
+              <a href="cart.html" onclick="showPage('cart')" style="color:rgb(252, 254, 254) ;">Cart</a>
+             
+              <a href="log.html" onclick="showPage('SignIn')" style="color:rgb(252, 254, 254);">
+                <img src="icon.jpg" alt="Sign In Logo" style="width: 20px; height: auto; margin-right: 5px;">
+            </a>           
+          </div>
+      </header>
+
+      <div class="image-container" >
+        <a type="submit" href="showclo.html"></a>
+        <a type="submit" href="footware.html"></a>
+      </div>
+  
+
+<div class="mid">
+    <form id="signup-form">
+        <h2>Sign Up</h2>
+        <label for="signup-username">Name:</label>
+        <input type="text" id="firstname" name="name" required >
+        
+
+        <label for="signup-Email">Email Id :</label>
+        <input type="text" id="Email" name="email" required>
+        
+
+        <label for="signup-username">Phone No.:</label>
+        <input type="number" id="signup" name="signup" required>
+       
+
+        <label for="signup-password">Password:</label>
+        <input type="password" id="signup-password" name="signup-password" required>
+        <br>
+
+        <button id="registerBtn" type="submit" >Sign Up</button>
+    </form>
+
+    <div class="switch-form">
+        <p >Already have an account? <a href="log.html" onclick="switchForm('login-form')">Login</a></p>
+    </div>
+</div>
+
+<script>
+
+    //sending data to backend 
+    const name = document.getElementById('firstname');
+    const temail = document.getElementById('Email');
+    const tpassword = document.getElementById('signup-password');
+    const registerBtn = document.getElementById('registerBtn');
+
+    document.addEventListener('click',(event)=>{
+
+        if(event.target.id === 'registerBtn'){
+
+            event.preventDefault();
+
+            registerUser();
+
+
+        }
+
+
+
+
+
+    })
+
+    const registerUser = async () => {
+  const apiUrl = 'http://localhost:3000/api/register'; // Replace with your actual API base URL
+
+  const userData = {
+    username: name.value,
+    email: temail.value,
+    password: tpassword.value,
+  };
+
+  try {
+    const response = await fetch(apiUrl, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(userData),
+    });
+
+    const responseData = await response.json();
+
+    if (response.ok) {
+      console.log('User registered successfully:', responseData.message);
+      window.location.href = 'log.html';
+    } else {
+      console.error('Failed to register user:', responseData.message);
+    }
+  } catch (error) {
+    console.error('Error during registration:', error);
+  }
+
+};
+
+
+// Call the function to register a user
+registerUser();
+
+function switchForm(formId) {
+        document.getElementById('signup-form').style.display = 'none';
+        document.getElementById(formId).style.display = 'block';
+    }
+    
+    document.addEventListener("DOMContentLoaded", function () {
+        document.getElementById('signup-form').addEventListener('submit', function (e) {
+            e.preventDefault();
+            alert('signup  successful');
+          window.location.href ='log.html';
+        });
+
+    })
+    
+    function switchForm(formId) {
+        document.getElementById('signup-form').style.display = 'none';
+        document.getElementById(formId).style.display = 'block';
+    }
+
+
+</script>
+
+</body>
+</html>

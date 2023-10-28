@@ -1,0 +1,99 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+    <title>E-Shope Website</title>
+</head>
+<body>
+    <header>
+      <strong><h3>E-Shope</h3></strong>
+      
+      <form>
+        <div class="search-bar">
+            <label for="searchInput"></label>
+            <input type="text" list="input" id="searchInput" name="searchInput" placeholder="Search products..." style="width: 400px;">
+            <button type="button" onclick="searchProducts()" style="width: 70px;">Search</button>
+            <div id="searchResults"></div>
+            <datalist id="input">
+                <option value="Cloth" data-location="showclo.html"></option>
+                <option value="Footwear" data-location="footware.html"></option>
+            </datalist>
+        </div>
+    </form>
+
+        </div>
+        <div class="nav">
+            <a href="index.html" onclick="showPage('home')" style="color: rgb(252, 254, 254);">Home</a>
+          
+            <a href="about.html" onclick="showPage('about')" style="color:rgb(252, 254, 254) ;">About</a>
+            <a href="help.html" onclick="showPage('contact')" style="color:rgb(252, 254, 254) ;">Help Desk</a>
+            <a href="Review.html" onclick="showPage('Feedback')" style="color:rgb(252, 254, 254) ;">Reviews</a>
+            <a href="cart.html" onclick="showPage('cart')" style="color:rgb(252, 254, 254) ;">Cart</a>
+           
+            <a href="log.html" onclick="showPage('SignIn')" style="color:rgb(252, 254, 254);">
+              <img src="icon.jpg" alt="Sign In Logo" style="width: 20px; height: auto; margin-right: 5px;">
+          </a>           
+        </div>
+    </header>
+
+    <div class="image-container" >
+    <b><a type="submit" href="showclo.html"><img src="front1.jpg"><p style="padding-left: 235px;color:rgb(179, 182, 183);font-size: 25px;">Men's & Women's clothing</p></a></b>
+        <b><a type="submit" href="footware.html"><img src="front.jpg"><p style="padding-left: 350px;color:rgb(179, 182, 183);font-size: 25px;">Footwears</p></a></b>
+</div>  
+        
+
+    <footer>
+        <div class="footerLeft">
+            <div class="footerMenu">
+                <h1 class="fMenuTitle">About Us</h1>
+                <ul class="fList">
+                    <li class="fListItem">Company</li>
+                    <li class="fListItem">Contact</li>
+                    <li class="fListItem">Careers</li>
+                    
+                </ul>
+            </div>
+            <div class="footerMenu">
+                <h1 class="fMenuTitle">Useful Links</h1>
+                <ul class="fList">
+                    <li class="fListItem">Support</li>
+                    <li class="fListItem">Refund</li>
+                    <li class="fListItem">Feedback</li>
+                    
+                </ul>
+            </div>
+            <div class="footerMenu">
+                <h1 class="fMenuTitle">Products</h1>
+                <ul class="fList">
+                    <li class="fListItem">Men's Clothes</li>
+                    <li class="fListItem">Women's Clothes</li>
+                    <li class="fListItem">Footwears</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footerRight">
+            <div class="footerRightMenu">
+                <h1 class="fMenuTitle">Subscribe</h1>
+                <div class="fMail">
+                    <input type="text" placeholder="abc314@gmail.com" class="fInput">
+                    <button class="fButton">Join!</button>
+                </div>
+            </div>
+            <div class="footerRightMenu">
+                <h1 class="fMenuTitle">Follow Us On<br>Instagram    X   Whatsapp</h1>
+                <div class="fIcons">
+                
+                </div>
+            </div>
+            <div class="footerRightMenu">
+                <span class="copyright">@ Team. All rights reserved. 2023.</span>
+            </div>
+        </div>
+    </footer>
+    
+</body>
+</html>

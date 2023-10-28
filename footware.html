@@ -1,0 +1,139 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>footwear</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <strong><h3>E-Shope</h3></strong>
+    
+    <form>
+      <div class="search-bar">
+          <label for="searchInput"></label>
+          <input type="text" list="input" id="searchInput" name="searchInput" placeholder="Search products..." style="width: 400px;">
+          <button type="button" onclick="searchProducts()" style="width: 70px;">Search</button>
+          <div id="searchResults"></div>
+          <datalist id="input">
+              <option value="Cloth" data-location="showclo.html"></option>
+              <option value="Footwear" data-location="footware.html"></option>
+          </datalist>
+      </div>
+  </form>
+
+      </div>
+      <div class="nav">
+          <a href="index.html" onclick="showPage('home')" style="color: rgb(252, 254, 254);">Home</a>
+        
+          <a href="about.html" onclick="showPage('about')" style="color:rgb(252, 254, 254) ;">About</a>
+          <a href="help.html" onclick="showPage('contact')" style="color:rgb(252, 254, 254) ;">Help Desk</a>
+          <a href="Review.html" onclick="showPage('Feedback')" style="color:rgb(252, 254, 254) ;">Reviews</a>
+          <a href="cart.html" onclick="showPage('cart')" style="color:rgb(252, 254, 254) ;">Cart</a>
+         
+          <a href="log.html" onclick="showPage('SignIn')" style="color:rgb(252, 254, 254);">
+            <img src="icon.jpg" alt="Sign In Logo" style="width: 20px; height: auto; margin-right: 5px;">
+        </a>           
+      </div>
+  </header>
+
+<strong><h1 style="font-size: 50px; text-align: center; color: rgb(19, 19, 20); ">Footwears</h1></strong>
+<img src="offer.webp" style="height: 300px;width:1800px;">
+
+
+<div class="image-container">
+
+
+  <a type="submit" href="buy.html"><img src="fo6.jpg"><button id="but1">Buy Now</button ><button id="but2" onclick="buyNow('Product 1')">Add to Cart</button></a>
+  <a type="submit" href="buy.html"><img src="fo2.jpg"><button id="but1">Buy Now</button ><button id="but2" onclick="buyNow('Product 2')">Add to Cart</button></a>
+</div>
+
+
+<div class="imag" id="im">
+    
+    <a type="submit" href="buy.html"><img src="fo3.jpg"><button id="but1">Buy Now</button ><button id="but2" onclick="buyNow('Product 3')">Add to Cart</button></a>
+
+
+    <a type="submit" href="buy.html"><img src="fo4.jpg"> <button id="but1">Buy Now</button ><button id="but2" onclick="buyNow('Product 4')">Add to Cart</button></a>
+</div>
+
+
+ 
+<style>
+    .image-container {
+    display:flex;
+    
+    
+}
+
+#but1{
+    margin-top: 15px;
+    margin-left: 250px;
+}
+#but2{
+    margin-top: 15px;
+    margin-left: 50px;
+}
+
+.image-container img{
+     
+    size:0capacity;
+    margin-right: 50px;
+    padding-left: 100px;
+    padding-top: 40px;
+
+    
+}
+
+#pr{
+    margin-right: 50px;
+    padding-left: 100px;
+    padding-top: 40px;
+}
+#im{
+    size:0capacity;
+    margin-right: 50px;
+    padding-left: 100px;
+    padding-top: 40px;
+}
+
+.imag {
+    display:flex;
+    
+    
+}
+
+img{
+    height:500px;
+    
+}
+
+.imag img{
+     
+    size:0capacity;
+    margin-right: 50px;
+    padding-left: 100px;
+    padding-top: 20px;
+
+    
+}
+</style>
+
+<script>
+     document.getElementById("but2").addEventListener("click",function(){window.location.href="buy.html"});
+  function buyNow(productName) {
+    
+    alert('You have bought ' + productName);
+  }
+</script>
+
+</body>
+</html>

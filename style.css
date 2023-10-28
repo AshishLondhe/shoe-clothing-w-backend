@@ -1,0 +1,168 @@
+
+  
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    
+}
+
+header {
+    background-color: #131a22;
+    color: white;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.search-bar {
+    flex: 1;
+    margin: 0 9px;
+}
+
+.search-bar input {
+    padding: 5px;
+    width: 50%;
+}
+
+.search-bar button {
+    padding: 5px;
+    width: 10%;
+    background-color: #febd69;
+    border: none;
+    cursor: pointer;
+}
+
+.nav {
+    display: flex;
+    gap: 40px;
+    padding: 5px;
+    color: aqua;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+}
+
+main {
+    padding: 20px;
+}
+
+.page {
+    display: none;
+}
+
+/* footer {
+    background-color: #131a22;
+    color: white;
+    text-align: center;
+    padding: 10px;
+} */
+
+/* .product-card {
+    border: 1px solid #ddd;
+    padding: 10px;
+    /* margin: 10px;
+    text-align: center;
+ } */ 
+
+
+.page {
+    display: block;
+    /* width:1000px;
+    height:200px; */
+}
+
+img{
+    width:600px;
+    height:500px;
+
+}
+
+/* #home{
+  display: flex;
+  
+} */
+
+button{
+    align-items: center;
+}
+
+.image-container {
+    display:flex;
+    
+    
+}
+
+.image-container img{
+    
+    margin-right: 50px;
+    padding-left: 100px;
+    padding-top: 20px;
+
+    
+}
+
+footer {
+    display: flex;
+    background-color: #f7d88a;
+  }
+  
+  .footerLeft {
+    flex: 2;
+    display: flex;
+    justify-content: space-between;
+    padding: 50px;
+  }
+  
+  .fMenuTitle {
+    font-size: 16px;
+  }
+  
+  .fList {
+    padding: 0;
+    list-style: none;
+  }
+  
+  .fListItem {
+    margin-bottom: 10px;
+    color: gray;
+    cursor: pointer;
+  }
+  
+  .footerRight {
+    flex: 1; padding: 50px; display: flex; flex-direction: column; justify-content: space-between;
+  }
+  
+  .fInput {
+    padding: 5px;
+  }
+  
+  .fButton {
+    padding: 5px;
+    background-color: black;
+    color: white;
+  }
+  
+  .fIcons{
+    display: flex;
+  }
+  
+  .fIcon{
+    width: 20px;
+    height: 20px;
+    margin-right: 15px;
+    
+  }
+  
+  .copyright{
+    font-weight: 300;
+    font-size: 14px;
+  }

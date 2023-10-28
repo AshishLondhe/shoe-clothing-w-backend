@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Help Desk</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="help.css">
+    <script type="text/javascript" src="help.js"></script>
+    
+</head>
+<body>
+    <header>
+        <strong><h3>E-Shope</h3></strong>
+        
+        <form>
+          <div class="search-bar">
+              <label for="searchInput"></label>
+              <input type="text" list="input" id="searchInput" name="searchInput" placeholder="Search products..." style="width: 400px;">
+              <button type="button" onclick="searchProducts()" style="width: 70px;">Search</button>
+              <div id="searchResults"></div>
+              <datalist id="input">
+                  <option value="Cloth" data-location="showclo.html"></option>
+                  <option value="Footwear" data-location="footware.html"></option>
+              </datalist>
+          </div>
+      </form>
+  
+          </div>
+          <div class="nav">
+              <a href="index.html" onclick="showPage('home')" style="color: rgb(252, 254, 254);">Home</a>
+            
+              <a href="about.html" onclick="showPage('about')" style="color:rgb(252, 254, 254) ;">About</a>
+              <a href="help.html" onclick="showPage('contact')" style="color:rgb(252, 254, 254) ;">Help Desk</a>
+              <a href="Review.html" onclick="showPage('Feedback')" style="color:rgb(252, 254, 254) ;">Reviews</a>
+              <a href="cart.html" onclick="showPage('cart')" style="color:rgb(252, 254, 254) ;">Cart</a>
+             
+              <a href="log.html" onclick="showPage('SignIn')" style="color:rgb(252, 254, 254);">
+                <img src="icon.jpg" alt="Sign In Logo" style="width: 20px; height: auto; margin-right: 5px;">
+            </a>           
+          </div>
+      </header>
+
+      <div class="image-container" >
+        <a type="submit" href="showclo.html"></a>
+        <a type="submit" href="footware.html"></a>
+      </div>
+        <b><h1 style="text-align: center;">My Help Desk</h1></b>
+   
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#knowledge-base">Knowledge Base</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <main>
+        <section id="home">
+            <h2>Welcome to My Help Desk</h2>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut vehicula leo eu suscipit.
+            </p>
+        </section>
+
+        <section id="knowledge-base">
+            <h2>Knowledge Base</h2>
+            <p>
+                Explore our knowledge base to find answers to common questions and issues.
+            </p>
+            <!-- Include links to articles or categories -->
+            <ul>
+                <li><a href="#category1">Category 1</a></li>
+                <li><a href="#category2">Category 2</a></li>
+                <!-- Add more categories as needed -->
+            </ul>
+        </section>
+
+        <section id="contact">
+            <h2>Contact Us</h2>
+            <p>
+                Need further assistance? Reach out to us using the contact form below.
+            </p>
+            <form action="#" method="post" id="contactForm" onsubmit="return validateForm()">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+
+                <button  type="button"  onclick="submitForm()">Submit</button>
+            </form>
+        </section>
+    </main>
+
+
+
+</body>
+</html>

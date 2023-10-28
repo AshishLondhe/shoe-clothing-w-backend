@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
+    <link rel="stylesheet" href="index.html">
+    <link rel="stylesheet" href="cart.css">
+    <script type="text/javascript" src="cart.js"></script>
+  
+</head>
+<body>
+    <header>
+        <strong><h3>E-Shope</h3></strong>
+        
+        <form>
+          <div class="search-bar">
+              <label for="searchInput"></label>
+              <input type="text" list="input" id="searchInput" name="searchInput" placeholder="Search products..." style="width: 400px;">
+              <button type="button" onclick="searchProducts()" style="width: 70px;">Search</button>
+              <div id="searchResults"></div>
+              <datalist id="input">
+                  <option value="Cloth" data-location="showclo.html"></option>
+                  <option value="Footwear" data-location="footware.html"></option>
+              </datalist>
+          </div>
+      </form>
+  
+          </div>
+          <div class="nav">
+              <a href="index.html" onclick="showPage('home')" style="color: rgb(252, 254, 254);">Home</a>
+            
+              <a href="about.html" onclick="showPage('about')" style="color:rgb(252, 254, 254) ;">About</a>
+              <a href="help.html" onclick="showPage('contact')" style="color:rgb(252, 254, 254) ;">Help Desk</a>
+              <a href="Review.html" onclick="showPage('Feedback')" style="color:rgb(252, 254, 254) ;">Reviews</a>
+              <a href="cart.html" onclick="showPage('cart')" style="color:rgb(252, 254, 254) ;">Cart</a>
+             
+              <a href="log.html" onclick="showPage('SignIn')" style="color:rgb(252, 254, 254);">
+                <img src="icon.jpg" alt="Sign In Logo" style="width: 20px; height: auto; margin-right: 5px;">
+            </a>           
+          </div>
+      </header>
+
+
+        <b><h1 style="text-align: center; ">Shopping Cart</h1></b>
+ 
+    
+
+    <main>
+        <!-- Product Listing -->
+        <div class="product" id="product1">
+            <span>cloth</span>
+            <span>$20.00</span>
+            <button onclick="addToCart('Cloth', 20.00)">Add to Cart</button>
+        </div>
+
+        <div class="product" id="product2">
+            <span>shoe</span>
+            <span>$30.00</span>
+            <button onclick="addToCart('shoe', 30.00)">Add to Cart</button>
+        </div>
+
+        <!-- Shopping Cart -->
+        <div class="cart">
+            <h2>Shopping Cart</h2>
+            <div id="cartItems"></div>
+            <button onclick="checkout()">Checkout</button>
+        </div>
+    </main>
+
+    
+
+</body>
+</html>

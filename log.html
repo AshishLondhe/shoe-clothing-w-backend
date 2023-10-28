@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login and Sign Up Page</title>
+    
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="log.css">
+   
+   
+</head>
+<body>
+    <header>
+        <strong><h3>E-Shope</h3></strong>
+        
+        <form>
+          <div class="search-bar">
+              <label for="searchInput"></label>
+              <input type="text" list="input" id="searchInput" name="searchInput" placeholder="Search products..." style="width: 400px;">
+              <button type="button" onclick="searchProducts()" style="width: 70px;">Search</button>
+              <div id="searchResults"></div>
+              <datalist id="input">
+                  <option value="Cloth" data-location="showclo.html"></option>
+                  <option value="Footwear" data-location="footware.html"></option>
+              </datalist>
+          </div>
+      </form>
+  
+          </div>
+          <div class="nav">
+              <a href="index.html" onclick="showPage('home')" style="color: rgb(252, 254, 254);">Home</a>
+            
+              <a href="about.html" onclick="showPage('about')" style="color:rgb(252, 254, 254) ;">About</a>
+              <a href="help.html" onclick="showPage('contact')" style="color:rgb(252, 254, 254) ;">Help Desk</a>
+              <a href="Review.html" onclick="showPage('Feedback')" style="color:rgb(252, 254, 254) ;">Reviews</a>
+              <a href="cart.html" onclick="showPage('cart')" style="color:rgb(252, 254, 254) ;">Cart</a>
+             
+              <a href="log.html" onclick="showPage('SignIn')" style="color:rgb(252, 254, 254);">
+                <img src="icon.jpg" alt="Sign In Logo" style="width: 20px; height: auto; margin-right: 5px;">
+            </a>           
+          </div>
+      </header>
+  
+    <diV class="mid">
+    <form id="login-form">
+        <h2>Login</h2>
+        <label for="login-username">Email:</label>
+        <input type="text" id="login-username" name="login-username" placeholder="abc21@gmail.com"  required>
+
+        <label for="login-password">Password:</label>
+        <input type="password" id="login-password" name="login-password" required>
+
+        <button id="login-btn" type="submit">Login</button>
+    </form>
+
+    <div class="switch-form">
+        <p>Don't have an account? <a href="signup.html" onclick="switchForm('signup-form')">Sign up</a></p>
+    </div>
+</div>
+
+<script>
+
+    //sending data to backend
+    const username = document.getElementById('login-username');
+    const password = document.getElementById('login-password');
+    const loginBtn = document.getElementById('login-btn');
+
+    loginBtn.addEventListener('click',(event)=>{
+
+        event.preventDefault();
+
+        login();
+
+    })
+
+    async function login() {
+      const email = document.getElementById('login-username').value;
+      const password = document.getElementById('login-password').value;
+
+      const apiUrl = 'http://localhost:3000/api/login'; // Replace with your actual API base URL
+
+      try {
+        const response = await fetch(apiUrl, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({ email, password }),
+        });
+
+        const responseData = await response.json();
+        alert(responseData.message);
+
+        if (response.ok) {
+          console.log('Login successful:', responseData.message);
+        } else {
+          console.error('Login failed:', responseData.message);
+        }
+      } catch (error) {
+        console.error('Error during login:', error);
+      }
+      window.location.href = 'index.html';
+    }
+
+
+
+
+
+
+
+    // function switchForm(formId) {
+    //     document.getElementById('login-form').style.display = 'none';
+    //     document.getElementById('signup-form').style.display = 'none';
+    //     document.getElementById(formId).style.display = 'block';
+    // }
+    
+    // document.addEventListener("DOMContentLoaded", function () {
+    //     document.getElementById('login-form').addEventListener('submit', function (e) {
+    //         e.preventDefault();
+    //         // Add your login logic here
+    //         alert('Login successful');
+    //         window.location.href = 'index.html';
+    //     });
+
+    // })
+    
+    // function switchForm(formId) {
+    //     document.getElementById('login-form').style.display = 'none';
+       
+    //     document.getElementById(formId).style.display = 'block';
+    // }
+
+
+</script>
+
+</body>
+</html>

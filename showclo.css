@@ -1,0 +1,51 @@
+.image-container {
+    display:flex;
+    
+    
+}
+#but1{
+    margin-top: 15px;
+    margin-left: 250px;
+}
+#but2{
+    margin-top: 15px;
+    margin-left: 50px;
+}
+
+
+.image-container img{
+     
+    size:0capacity;
+    margin-right: 50px;
+    padding-left: 100px;
+    padding-top: 40px;
+
+    
+}
+#im{
+    size:0capacity;
+    margin-right: 50px;
+    padding-left: 100px;
+    padding-top: 40px;
+}
+
+.imag {
+    display:flex;
+    
+    
+}
+
+img{
+    height:500px;
+    
+}
+
+.imag img{
+     
+    size:0capacity;
+    margin-right: 50px;
+    padding-left: 100px;
+    padding-top: 20px;
+
+    
+}

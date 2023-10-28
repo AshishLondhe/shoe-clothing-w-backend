@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Reviews</title>
+    <link rel="stylesheet" href="reviews.css">
+    <script type="text/javascript" src="reviews.js"></script>
+        
+</head>
+<body>
+    <header>
+        <strong><h3>E-Shope</h3></strong>
+        
+        <form>
+          <div class="search-bar">
+              <label for="searchInput"></label>
+              <input type="text" list="input" id="searchInput" name="searchInput" placeholder="Search products..." style="width: 400px;">
+              <button type="button" onclick="searchProducts()" style="width: 70px;">Search</button>
+              <div id="searchResults"></div>
+              <datalist id="input">
+                  <option value="Cloth" data-location="showclo.html"></option>
+                  <option value="Footwear" data-location="footware.html"></option>
+              </datalist>
+          </div>
+      </form>
+    
+          </div>
+          <div class="nav">
+              <a href="index.html" onclick="showPage('home')" style="color: rgb(252, 254, 254);">Home</a>
+            
+              <a href="about.html" onclick="showPage('about')" style="color:rgb(252, 254, 254) ;">About</a>
+              <a href="help.html" onclick="showPage('contact')" style="color:rgb(252, 254, 254) ;">Help Desk</a>
+              <a href="Review.html" onclick="showPage('Feedback')" style="color:rgb(252, 254, 254) ;">Reviews</a>
+              <a href="cart.html" onclick="showPage('cart')" style="color:rgb(252, 254, 254) ;">Cart</a>
+             
+              <a href="log.html" onclick="showPage('SignIn')" style="color:rgb(252, 254, 254);">
+                <img src="icon.jpg" alt="Sign In Logo" style="width: 20px; height: auto; margin-right: 5px;">
+            </a>           
+          </div>
+      </header>
+    
+      <div class="image-container" >
+        <a type="submit" href="showclo.html"></a>
+        <a type="submit" href="footware.html"></a>
+      </div>
+        <b><h1 style="text-align: center;" >Reviews</h1></b>
+   
+
+    <main>
+        <!-- Feedback Form -->
+        <form action="#" method="post" id="feedbackForm" onsubmit="return submitFeedback()">
+            <label for="name">Your Full Name:</label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="Mobile">Mobile Number:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="Email">Your Email :</label>
+            <input type="email" id="name" name="name" required>
+
+            
+            <br><br>
+            <label for="rating">Your Rating:</label>
+            <br>
+            <label for="rating5">5 Stars</label>
+            <input type="radio" id="rating5" name="rating" value="5" required>
+
+           <label for="rating4">4 Stars</label>
+            <input type="radio" id="rating4" name="rating" value="4" required>
+
+            <label for="rating4">3 Stars</label>
+            <input type="radio" id="rating4" name="rating" value="4" required>
+
+            <label for="rating4">2 Stars</label>
+            <input type="radio" id="rating4" name="rating" value="4" required>
+
+            <label for="rating4">1 Stars</label>
+            <input type="radio" id="rating4" name="rating" value="4" required>
+            
+
+            <label for="feedback">Your Feedback:</label>
+            <textarea id="feedback" name="feedback" rows="4" required></textarea>
+
+            <button type="button"  onclick="submitForm()">Submit Feedback</button>
+        </form>
+
+        <!-- Feedback Results -->
+        <div class="result" id="feedbackResult"></div>
+    </main>
+
+
+
+</body>
+</html>
